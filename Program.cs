@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using System.Linq;
 
 namespace HelloWorld
 {
@@ -97,6 +98,38 @@ namespace HelloWorld
                     Console.WriteLine(" Inner: " + j); // Executes 6 times (2 * 3)
                 }
             }
+            string[] cars = { "Lambo", "Ferrari", "Nissan", "Toyota" };
+            Array.Sort(cars);
+            foreach (string i in cars)
+            {
+                Console.WriteLine(i);
+            }
+            for (int i = 0; i < 10; i++) 
+            {
+                if (i == 4) {
+                    break;
+                }
+                Console.WriteLine(i);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 4)
+                {
+                    continue;
+                }
+                Console.WriteLine(i);
+            }
+            string[] people = { "me", "du", "wir", "us" };
+            for (int i = 0;i < people.Length; i++)
+            {
+                Console.WriteLine(people[i]);
+            }
+            int[] myNumbers = { 5, 1, 8, 9 };
+            Console.WriteLine(myNumbers.Max());  // returns the largest value
+            Console.WriteLine(myNumbers.Min());  // returns the smallest value
+            Console.WriteLine(myNumbers.Sum());  // returns the sum of elements
+            int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+            Console.WriteLine(numbers[0, 2]);  // Outputs 2
 
         }
 
